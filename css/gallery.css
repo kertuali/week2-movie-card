@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 900px;
+    height: 900px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 595px 300px;
+    gap: 5px;
+}
+
+.container > div {
+    width: 100%;
+    height: 100%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ryan {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.jodie {
+    grid-column: 3/5;
+    grid-row: 1/2;
+}
+
+.joe {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.pokimane{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.channing{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.britne{
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+@media (max-width: 568px) {
+    body {
+        background-color: black;
+    }
+
+    .container {
+        width: auto;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: "ryan" "jodie" "joe" "channing" "britne" "pokimane";
+    }
+
+    .ryan {
+        grid-area: ryan;
+    }
+
+    .jodie {
+        grid-area: jodie;
+    }
+
+    .joe {
+        grid-area: joe;
+    }
+
+    .channing {
+        grid-area: channing;
+    }
+
+    .britne {
+        grid-area: britne;
+    }
+
+    .pokimane {
+        grid-area: pokimane;
+    }
+}
