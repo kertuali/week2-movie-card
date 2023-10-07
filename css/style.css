@@ -6,6 +6,42 @@
     box-sizing: border-box;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #777777ad;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: beige;
+    margin: 5% auto;
+    padding: 5rem;
+    width: 600px;
+    height: 600px;
+    animation: zoom-in 1s;
+}
+
+@keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.closeBtn {
+    float: right;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.movie-poster-modal {
+    width: 300px;
+}
+
 html  {
     font-family: 'Roboto', sans-serif;
 }
